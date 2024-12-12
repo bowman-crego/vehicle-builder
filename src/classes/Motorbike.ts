@@ -64,6 +64,8 @@ override printDetails(): void {
       );
   }
 
+  
+
 }
   // TODO: The properties should include vin, color, make, model, year, weight, top speed, and wheels
   // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])

@@ -69,6 +69,7 @@ class Truck extends Vehicle {
     } else if(vehicle.weight >= this.towingCapacity) {
       console.log(`${make} ${model} is too heavy to be towed`)
     }
+  
     // TODO: Get the make an model of the vehicle if it exists
     // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
     // TODO: If it is, log that the vehicle is being towed
