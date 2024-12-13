@@ -23,7 +23,7 @@ class Motorbike extends Vehicle {
     year: number,
     weight: number,
     topSpeed: number,
-    wheels: Wheel[]
+    wheels: Wheel[],
   ) {
     super()
 
@@ -34,10 +34,11 @@ class Motorbike extends Vehicle {
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
+    
   
 
-  if (wheels.length !== 2) {
-    this.wheels = [new Wheel(), new Wheel()]
+  if (!wheels || wheels.length !== 2) {
+    this.wheels = [new Wheel(), new Wheel()];
   } else {
     this.wheels = wheels;
   }
@@ -54,9 +55,15 @@ override printDetails(): void {
   console.log(`Year: ${this.year}`);
   console.log(`Weight: ${this.weight} lbs`);
   console.log(`Top Speed: ${this.topSpeed} mph`);
-
   
-  }
+  console.log(
+    `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
+  );
+  console.log(
+    `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
+  
+  );
+}
 
   wheelie(): void {
     console.log(
